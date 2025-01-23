@@ -1,0 +1,178 @@
+body {
+    background: linear-gradient(to bottom, #c1e0f6, #123f5e);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    font-family: Comic Sans MS;
+    margin: 0;
+}
+  
+/* Barra degli strumenti */
+.barra {
+  width: 100%;
+  height: 60px; /* Altezza barra leggermente aumentata per layout migliore */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3576a0;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative; /* Per mantenere il layout interno consistente */
+}
+
+/* Pulsante Home */
+.barra-home {
+  font-weight: bold;
+  background: none;
+  color: white;
+  font-family: Comic Sans MS;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none; 
+  margin-left: 15px;
+}
+
+.barra-home:hover, .barra-home:active {
+  background: none;
+  color: #cce7ff; /* Colore leggermente più chiaro al passaggio del mouse */
+}
+
+/* Titolo centrale */
+.barra-title {
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 auto; 
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Contenuto a destra */
+.barra-right {
+  margin-right: 15px;
+  text-align: right;
+  color: white;
+  line-height: 1.2;
+  font-family: Comic Sans MS;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end;
+}
+
+.barra-steam {
+  font-size: 1.5rem; 
+  font-weight: bold;
+}
+
+.barra-who {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+  
+/* Contenuto principale */
+.content {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.main-image {
+    width: 500px; 
+    height: auto;
+    max-height: 600px;
+  }
+  
+/* Pulsante centrale GIOCA */
+.action-button {
+    background-color: #a3d4f7;
+    font-family: Comic Sans MS;
+    color: #3576a0;
+    border: none;
+    padding: 12px 150px; 
+    font-size: 5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 0 10px;
+    transition: background-color 0.2s ease;
+  }
+  
+.action-button:hover {
+    background-color: #8bbfdf;
+  }
+  
+.action-button:active {
+    background-color: #6aa4c6;
+  }
+  
+/* Scheda laterale (side-card) */
+.side-card {
+    position: fixed;
+    top: 50%;
+    right: -300px; /* Inizia fuori dallo schermo */
+    transform: translateY(-50%);
+    width: 250px;
+    background-color: white;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px 0 0 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #3576a0;
+    transition: right 0.3s ease;
+  }
+  
+.side-card p {
+    margin: 0 0 10px;
+  }
+  
+.side-card .side-button {
+    background-color: #a3d4f7;
+    color: #3576a0;
+    border: none;
+    font-family: Comic Sans MS;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+.side-card .side-button:hover {
+    background-color: #8bbfdf;
+  }
+  
+.side-card .side-button:active {
+    background-color: #6aa4c6;
+  }
+  
+  /* Mostra la scheda quando viene attivata */
+.side-card.open {
+    right: 0;
+  }
+  
+.sinistra {
+    float: left; /* posizione del contenitore */
+    width: 75%; /* larghezza della colonna di sinistra */
+    text-align: left; /* allineamento del testo */
+}
+.destra {
+    float: right; /* posizione del contenitore */
+    width: 25%; /* larghezza della colonna di destra */
+    text-align: right; /* allineamento del testo */
+}
+.contenitore {
+  width: 100%;
+  position: relative;
+}
