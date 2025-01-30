@@ -1,26 +1,28 @@
 body {
-    background: linear-gradient(to bottom, #c1e0f6, #123f5e);
-    height: 100vh;
+    background: linear-gradient(to bottom, #c1e0f6, #2b9fed);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
     font-family: Comic Sans MS;
     margin: 0;
+    background-repeat: no-repeat;
 }
   
 /* Barra degli strumenti */
 .barra {
-  width: 100%;
-  height: 60px; /* Altezza barra leggermente aumentata per layout migliore */
+  width: 97.2%;
+  height: 60px; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #3576a0;
+  background-color: rgba(53, 118, 160, 0.5); /* Colore semitrasparente */
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  position: relative; /* Per mantenere il layout interno consistente */
+  position: sticky;
+  margin: 0;
+  -webkit-backdrop-filter: blur(10px); /* Safari e altri browser WebKit */
+  backdrop-filter: blur(10px);
 }
 
 /* Pulsante Home */
@@ -34,7 +36,7 @@ body {
   padding: 0;
   margin: 0;
   border: none; 
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 .barra-home:hover, .barra-home:active {
@@ -56,7 +58,7 @@ body {
 
 /* Contenuto a destra */
 .barra-right {
-  margin-right: 15px;
+  margin-right: 25px;
   text-align: right;
   color: white;
   line-height: 1.2;
@@ -89,7 +91,7 @@ body {
   }
   
 .main-image {
-    width: 500px; 
+    width: 475px; 
     height: auto;
     max-height: 600px;
   }
@@ -100,12 +102,13 @@ body {
     font-family: Comic Sans MS;
     color: #3576a0;
     border: none;
-    padding: 12px 150px; 
+    padding: 10px 150px; 
     font-size: 5rem;
     cursor: pointer;
     border-radius: 8px;
     margin: 0 10px;
     transition: background-color 0.2s ease;
+    font-weight: bold;
   }
   
 .action-button:hover {
@@ -161,18 +164,92 @@ body {
 .side-card.open {
     right: 0;
   }
+
+
   
-.sinistra {
-    float: left; /* posizione del contenitore */
-    width: 75%; /* larghezza della colonna di sinistra */
-    text-align: left; /* allineamento del testo */
+  .sinistra {
+    float: left; /* Mantiene il blocco a sinistra */
+    width: 30%; /* Imposta la larghezza del contenitore */
+    text-align: center; /* Allinea il contenuto al centro */
 }
+
+.sinistra img {
+    width: 100%; /* Adatta le immagini alla larghezza del contenitore */
+    max-width: 150px; /* Imposta una larghezza massima uniforme */
+    height: 150px; /* Imposta un'altezza fissa uniforme */
+    object-fit: cover; /* Mantiene le proporzioni ritagliando l'immagine se necessario */
+    display: block; /* Evita spazi indesiderati */
+    margin: 0 auto; /* Centra le immagini orizzontalmente */
+}
+
 .destra {
-    float: right; /* posizione del contenitore */
-    width: 25%; /* larghezza della colonna di destra */
-    text-align: right; /* allineamento del testo */
+    float: right; 
+    width: 70%;
+    text-align: left;
 }
 .contenitore {
   width: 100%;
   position: relative;
+}
+
+.game-container {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.answer-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px; /* Distanza tra i pulsanti Sì e No */
+}
+
+.answer-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none; /* Rimuove il bordo predefinito */
+  border-radius: 25px; /* Arrotonda gli angoli dei pulsanti */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Aggiunto effetto di transizione */
+}
+
+/* Colori specifici per i pulsanti */
+#yes {
+  background-color: #4CAF50; /* Verde per "Sì" */
+  color: white;
+}
+
+#no {
+  background-color: #f44336; /* Rosso per "No" */
+  color: white;
+}
+
+#dontKnow {
+  background-color: #9E9E9E; /* Grigio per "Non lo so" */
+  color: white;
+  margin-top: 10px; /* Sposta il pulsante sotto gli altri */
+  width: 100%; /* Allunga il pulsante per tutta la larghezza */
+}
+
+/* Hover per ogni pulsante */
+.answer-buttons button:hover {
+  background-color: #3576a0;
+  color: white;
+  transform: scale(1.05); /* Aggiunto effetto hover per ingrandire il pulsante */
+}
+
+/* Risultato */
+#result {
+  font-size: 18px;
+  margin-top: 20px;
 }
