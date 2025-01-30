@@ -1,28 +1,513 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport">
-  <title>Personaggi - Putinator</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaggi - Putinator</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../json/characters.js"></script>
+    <script src="../json/questions.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 <body>
-  <!-- Barra degli strumenti -->
-  <div class="barra">
-    <button class="barra-home" onclick="goHome2()">HOME</button>
-    <h1 class="barra-title">Putinator</h1>
-    <div class="barra-right">
-      <span class="barra-steam">STEAM</span>
-      <span class="barra-who">WHO?</span>
+    <!-- Barra degli strumenti -->
+    <div class="barra">
+        <button class="barra-home" onclick="goHome2()">HOME</button>
+        <h1 class="barra-title">Putinator</h1>
+        <div class="barra-right">
+            <span class="barra-steam">STEAM</span>
+            <span class="barra-who">WHO?</span>
+        </div>
     </div>
-  </div>
 
     <!-- Personaggi -->
-  <div class="contenitore">
-    <div class="sinistra"></div>
-    <div class="destra"></div>
-  </div>
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/turing.jpg" alt="Immagine di Turing">
+        </div>
+        <div class="destra">
+            <h2>Alan Turing</h2>
+            <ul>
+                <li>Nato UK 1912</li>
+                <li>Morto UK 1954</li>
+                <li>Matematico, Crittografo</li>
+            </ul>
 
-  <script src="../js/script.js"></script>
-</body>
-</html>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/einstein.jpg" alt="Immagine di Albert Einsten">
+        </div>
+        <div class="destra">
+            <h2>Albert Einsten</h2>
+            <ul>
+                <li>Nato Germania 1879</li>
+                <li>Morto USA 1955</li>
+                <li>Fisico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/hofmann.jpg" alt="Immagine di Albert Hoffman">
+        </div>
+        <div class="destra">
+            <h2>Albert Hoffman</h2>
+            <ul>
+                <li>Nato Svizzera 1906</li>
+                <li>Morto Svizzera 2008</li>
+                <li>Chimico</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/gauss.jpg" alt="Immagine di Carl Friedrich Gauss">
+        </div>
+        <div class="destra">
+            <h2>Carl Friedrich Gauss</h2>
+            <ul>
+                <li>Nato Germania 1777</li>
+                <li>Morto Germania 1885</li>
+                <li>Matematico, Astronomo, Fisico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/sagan.jpg" alt="Immagine di Carl Sagan">
+        </div>
+        <div class="destra">
+            <h2>Carl Sagan</h2>
+            <ul>
+                <li>Nato USA 1934</li>
+                <li>Morto USA 1996</li>
+                <li>Astrofisico, Divulgatore Scientifico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/darwin.jpg" alt="Immagine di Charles Darwin">
+        </div>
+        <div class="destra">
+            <h2>Charles Darwin</h2>
+            <ul>
+                <li>Nato UK 1809</li>
+                <li>Morto UK 1882</li>
+                <li>Biologo, Esploratore, Geologo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/hamilton.jpg" alt="Immagine di Margaret Hamilton">
+        </div>
+        <div class="destra">
+            <h2>Margaret Hamilton</h2>
+            <ul>
+                <li>Nata USA 1936</li>
+                <li>Non Ancora morta anche se siamo li</li>
+                <li>Informatica</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/mendeleev.jpg" alt="Immagine di Dmitrij Mendelev">
+        </div>
+        <div class="destra">
+            <h2>Dmitrij Mendelev</h2>
+            <ul>
+                <li>Nato Russia 1834</li>
+                <li>Morto Russia 1901</li>
+                <li>Chimico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/fermi.jpg" alt="Immagine di Enrico Fermi ">
+        </div>
+        <div class="destra">
+            <h2>Enrico Fermi</h2><ul>
+                <li>Nato Italia 1901</li>
+                <li>Morto USA 1954</li>
+                <li>Fisico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/eulero.jpg" alt="Immagine di Eulero">
+        </div>
+        <div class="destra">
+            <h2>Eulero</h2>
+            <ul>
+                <li>Nato Svizzera 1707</li>
+                <li>Morto Russia 1783</li>
+                <li>Matematico, Fisico, Astronomo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/fibonacci.jpg" alt="Immagine di Fibonacci">
+        </div>
+        <div class="destra">
+            <h2>Fibonacci</h2>
+            <ul>
+                <li>Nato Italia 1170</li>
+                <li>Morto Italia 1242</li>
+                <li>Matematico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/bohr.jpg" alt="Immagine di Niels Bohr ">
+        </div>
+        <div class="destra">
+            <h2>Niels Bohr</h2>
+            <ul>
+                <li>Nato Danimarca 1885</li>
+                <li>Morto Danimarco 1962</li>
+                <li>Fisico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/fleming.jpg" alt="Immagine di Fleming ">
+        </div>
+        <div class="destra">
+            <h2>Fleming</h2>
+            <ul>
+                <li>Nato UK 1881</li>
+                <li>Morto UK 1955</li>
+                <li>Chimico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/otto.jpg" alt="Immagine di Nikolaus Otto ">
+        </div>
+        <div class="destra">
+            <h2>Nikolaus Otto</h2>
+            <ul>
+                <li>Nato Germania 1832</li>
+                <li>Morto Germania 1891</li>
+                <li>Ingegnere</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/bernerslee.jpg" alt="Immagine di Tim Berners-Lee">
+        </div>
+        <div class="destra">
+            <h2>Tim Berners-Lee</h2>
+            <ul>
+                <li>Nato UK 1995</li>
+                <li>Vivo</li>
+                <li>Informatico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/galilei.jpg" alt="Immagine di Galileo Galilei ">
+        </div>
+        <div class="destra">
+            <h2>Galileo Galilei</h2>
+            <ul>
+                <li>Nato Italia 1564</li>
+                <li>Morto Italia 1642</li>
+                <li>Astronomo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/marconi.jpg" alt="Immagine di Guglielmo Marconi">
+        </div>
+        <div class="destra">
+            <h2>Guglielmo Marconi</h2>
+            <ul>
+                <li>Nato Italia 1874</li>
+                <li>Morto Itaglia 1937</li>
+                <li>Ingegnere</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/newton.jpg" alt="Immagine di Isaac Newton ">
+        </div>
+        <div class="destra">
+            <h2>Isaac Newton quel bastardo</h2>
+            <ul>
+                <li>Nato UK 1642</li>
+                <li>Morto UK 1726</li>
+                <li>Matematico, Fisico, Astronomo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/hopper.jpg" alt="Immagine di Grace Hopper">
+        </div>
+        <div class="destra">
+            <h2>Grace Hopper</h2>
+            <ul>
+                <li>Nata USA 1906</li>
+                <li>Morta USA 1992</li>
+                <li>Matematica, Informatica</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/watt.jpg" alt="Immagine di James Watt">
+        </div>
+        <div class="destra">
+            <h2>James Watt</h2>
+            <ul>
+                <li>Nato UK 1736 </li>
+                <li>Morto UK 1819</li>
+                <li>Ingegnere</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/newman.jpg" alt="Immagine di Jhon Von Newman">
+        </div>
+        <div class="destra">
+            <h2>Jhon Von Newman</h2>
+            <ul>
+                <li>Nato Ungheria 1903</li>
+                <li>Morto USA 1957</li>
+                <li>Matematico, Fisico, Informatico, Ingegnere</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/lavoisier.jpg" alt="Immagine di Lavoisier ">
+        </div>
+        <div class="destra">
+            <h2>Lavoisier</h2>
+            <ul>
+                <li>Nato Francia 1743</li>
+                <li>Morto Francia 1794</li>
+                <li>Chimico, Biologo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/curie.jpg" alt="Immagine di Marie Curie ">
+        </div>
+        <div class="destra">
+            <h2>Marie Curie</h2>
+            <ul>
+                <li>Nata Polonia 1867</li>
+                <li>Morta Francia 1934</li>
+                <li>Chimica, Fisica</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/franklin.jpg" alt="Immagine di Rosalind Franklin ">
+        </div>
+        <div class="destra">
+            <h2>Rosalind Franklin</h2>
+            <ul>
+                <li>Nata UK 1920</li>
+                <li>Morta UK 1958</li>
+                <li>Chimica</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/tyson.jpg" alt="Immagine di Neal deGrasse Tyson">
+        </div>
+        <div class="destra">
+            <h2>Neal deGrasse Tyson ma chi cazzo lo va a indovinare a sto coglione</h2>
+            <ul>
+                <li>Nato USA 1958</li>
+                <li>Purtroppo Vivo</li>
+                <li>Astrofisico, Divulgatore Scientifico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/tesla.jpeg" alt="Immagine di Nikola Tesla ">
+        </div>
+        <div class="destra">
+            <h2>Nikola Tesla</h2>
+            <ul>
+                <li>Nato Croazia 1856</li>
+                <li>Morto USA 1943</li>
+                <li>Inventore, Fisico, Ingegnere</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/richie.jpg" alt="Immagine di Dannis Richie">
+        </div>
+        <div class="destra">
+            <h2>Dannis Richie</h2>
+            <ul>
+                <li>Nato USA 1941</li>
+                <li>Morto USA 2011</li>
+                <li>Informatico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/oppenhaimer.jpg" alt="Immagine di Oppenhaimer ">
+        </div>
+        <div class="destra">
+            <h2>Oppenhaimer</h2>
+            <ul>
+                <li>Nato USA 1904</li>
+                <li>Morto USA 1967</li>
+                <li>Fisico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/freyman.jpg" alt="Immagine di Richard Feynman ">
+        </div>
+        <div class="destra">
+            <h2>Richard Feynman</h2>
+            <ul>
+                <li>Nato USA 1918</li>
+                <li>Morto USA 1988</li>
+                <li>Fisico, Divulgatore Scientifico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/hawking.jpg" alt="Immagine di Stephen Hawking">
+        </div>
+        <div class="destra">
+            <h2>Stephen Hawking</h2>
+            <ul>
+                <li>Nato UK 1942</li>
+                <li>Morto UK 2018</li>
+                <li>Fisico, Astrofisico, Matematico, Divulgatore Scientifico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/da_vinci.jpg" alt="Immagine di Leonardo Da Vinci ">
+        </div>
+        <div class="destra">
+            <h2>Leonardo Da Vinci</h2>
+            <ul>
+                <li>Nato Italia 1452</li>
+                <li>Morto Francia 1519</li>
+                <li>Pittore</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/caravaggio.jpg" alt="Immagine di Caravaggio ">
+        </div>
+        <div class="destra">
+            <h2>Caravaggio</h2>
+            <ul>
+                <li>Nato Italia 1571</li>
+                <li>Morto Italia 1610</li>
+                <li>Pittore</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/goya.png" alt="Immagine di Francesco Goya ">
+        </div>
+        <div class="destra">
+            <h2>Francesco (in)Goya</h2>
+            <ul>
+                <li>Nato Spagna 1746</li>
+                <li>Morto Francia 1828</li>
+                <li>Pittore</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/kalho.jpg" alt="Immagine di Frida Kalho">
+        </div>
+        <div class="destra">
+            <h2>Frida Kalho</h2>
+            <ul>
+                <li>Nata Messico 1907</li>
+                <li>Morta Messico 1954</li>
+                <li>Pittrice</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/lempicka.jpeg" alt="Immagine di Tamara de Lempicka">
+        </div>
+        <div class="destra">
+            <h2>Tamara de Lempicka</h2>
+            <ul>
+                <li>Nata Polonia 1898</li>
+                <li>Morta Messico 1980</li>
+                <li>Pittrice</li>
+            </ul>
+        </div>
+    </div>
