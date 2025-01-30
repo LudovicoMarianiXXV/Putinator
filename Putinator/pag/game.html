@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport">
-  <title>Personaggi - Putinator</title>
+  <title>Gioco - Putinator</title>
+  <script src="../json/characters.js"></script>
+  <script src="../json/questions.js"></script>
+  <script src="../js/script.js"></script>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body{
+      height: 100vh;
+      background-repeat: no-repeat;
+    }
+   
+  </style>
 </head>
 <body>
   <!-- Barra degli strumenti -->
@@ -17,12 +27,25 @@
     </div>
   </div>
 
-    <!-- Personaggi -->
-  <div class="contenitore">
-    <div class="sinistra"></div>
-    <div class="destra"></div>
-  </div>
+  <div class="game-container">
+    <!-- Div per la domanda -->
+    <div id="question" class="question">Caricamento...</div>
+    
+    <!-- Bottoni per le risposte -->
+    <div class="answer-buttons">
+      <button id="yes">Sì</button>
+      <button id="no">No</button>
+    </div>
 
-  <script src="../js/script.js"></script>
+    <!-- Pulsante "Non lo so" sotto -->
+    <div class="answer-buttons">
+      <button id="dontKnow">Non lo so</button>
+    </div>
+
+    <!-- Risultato -->
+    <div id="result"></div>
+</div>
+  
+
 </body>
 </html>
