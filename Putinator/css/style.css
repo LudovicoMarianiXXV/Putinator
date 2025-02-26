@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, #c1e0f6, #2b9fed);
+    background: linear-gradient(to bottom, #c1e0f6, #f3e3ec);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -7,25 +7,70 @@ body {
     font-family: Comic Sans MS;
     margin: 0;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
   
+/* Scheda laterale (side-card) */
+.side-card {
+  position: fixed;
+  top: 50%;
+  right: -300px; /* Inizia fuori dallo schermo */
+  transform: translateY(-50%);
+  width: 250px;
+  background-color: white;
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px 0 0 8px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #3576a0;
+  transition: right 0.3s ease;
+}
+
+.side-card p {
+  margin: 0 0 10px;
+}
+
+.side-card .side-button {
+  background-color: #a3d4f7;
+  color: #3576a0;
+  border: none;
+  font-family: Comic Sans MS;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.side-card .side-button:hover {
+  background-color: #8bbfdf;
+}
+
+.side-card .side-button:active {
+  background-color: #6aa4c6;
+}
+
+.side-card.open {
+  right: 0;
+}
+
+
 /* Barra degli strumenti */
 .barra {
-  width: 97.2%;
+  width: 100%;
   height: 60px; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(53, 118, 160, 0.5); /* Colore semitrasparente */
+  background-color: rgba(53, 118, 160);
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  position: sticky;
+  position: fixed;
   margin: 0;
-  -webkit-backdrop-filter: blur(10px); /* Safari e altri browser WebKit */
-  backdrop-filter: blur(10px);
+  z-index: 1000; 
 }
 
-/* Pulsante Home */
 .barra-home {
   font-weight: bold;
   background: none;
@@ -41,10 +86,9 @@ body {
 
 .barra-home:hover, .barra-home:active {
   background: none;
-  color: #cce7ff; /* Colore leggermente più chiaro al passaggio del mouse */
+  color: #cce7ff; 
 }
 
-/* Titolo centrale */
 .barra-title {
   color: white;
   font-size: 4rem;
@@ -56,7 +100,6 @@ body {
   transform: translateX(-50%);
 }
 
-/* Contenuto a destra */
 .barra-right {
   margin-right: 25px;
   text-align: right;
@@ -79,8 +122,36 @@ body {
   font-weight: bold;
 }
 
-  
-/* Contenuto principale */
+/* Domanda nuvoletta */
+.question-container::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 20%;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgb(2, 2, 2);
+}
+
+.question-container {
+  width: 700px;
+  position: left;
+  top: 50px; 
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid rgb(2, 2, 2);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Contenuto principale index*/
 .content {
     text-align: center;
     flex-grow: 1;
@@ -94,6 +165,7 @@ body {
     width: 475px; 
     height: auto;
     max-height: 600px;
+    margin-top: 50px;
   }
   
 /* Pulsante centrale GIOCA */
@@ -117,69 +189,25 @@ body {
   
 .action-button:active {
     background-color: #6aa4c6;
+    transform: scale(1.25); 
   }
   
-/* Scheda laterale (side-card) */
-.side-card {
-    position: fixed;
-    top: 50%;
-    right: -300px; /* Inizia fuori dallo schermo */
-    transform: translateY(-50%);
-    width: 250px;
-    background-color: white;
-    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 8px 0 0 8px;
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: #3576a0;
-    transition: right 0.3s ease;
-  }
-  
-.side-card p {
-    margin: 0 0 10px;
-  }
-  
-.side-card .side-button {
-    background-color: #a3d4f7;
-    color: #3576a0;
-    border: none;
-    font-family: Comic Sans MS;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-  }
-  
-.side-card .side-button:hover {
-    background-color: #8bbfdf;
-  }
-  
-.side-card .side-button:active {
-    background-color: #6aa4c6;
-  }
-  
-  /* Mostra la scheda quando viene attivata */
-.side-card.open {
-    right: 0;
-  }
 
-
-  
-  .sinistra {
-    float: left; /* Mantiene il blocco a sinistra */
-    width: 30%; /* Imposta la larghezza del contenitore */
-    text-align: center; /* Allinea il contenuto al centro */
+/* Divisione tra immagine e contenuto dei personaggi */
+.sinistra {
+    float: left; 
+    width: 30%; 
+    text-align: center; 
 }
 
 .sinistra img {
-    width: 100%; /* Adatta le immagini alla larghezza del contenitore */
-    max-width: 150px; /* Imposta una larghezza massima uniforme */
-    height: 150px; /* Imposta un'altezza fissa uniforme */
-    object-fit: cover; /* Mantiene le proporzioni ritagliando l'immagine se necessario */
-    display: block; /* Evita spazi indesiderati */
-    margin: 0 auto; /* Centra le immagini orizzontalmente */
+    width: 100%;
+    max-width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
 }
 
 .destra {
@@ -187,24 +215,52 @@ body {
     width: 70%;
     text-align: left;
 }
-.contenitore {
-  width: 100%;
-  position: relative;
+
+/* Divisione tra immagine e la domanda/pulsanti */
+.sinistra2 {
+  float: left;
+  width: 50%;
+  text-align: center;
 }
 
-.game-container {
-  width: 90%;
-  max-width: 500px;
+.result-image img{
+  width: 100%;
+  max-width: 200px; 
+  height: 200px; 
+  object-fit: cover; 
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.destra2 {
+  float: right; 
+  width: 50%;
   text-align: center;
-  background-color: white;
+}
+
+.contenitore {
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 90%;
+  position: relative;
+  margin-top: 25px;
+  border-style:groove;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+}
+
+/* Pulsanti e contenitore pulsanti */
+.game-container {
+  margin-top: 140px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  background-color: rgba(225, 242, 255, 0.789);
   padding: 20px;
   border-radius: 8px;
+  border: 1px solid black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.question {
-  font-size: 20px;
-  margin-bottom: 20px;
 }
 
 .answer-buttons {
@@ -218,38 +274,52 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  border: none; /* Rimuove il bordo predefinito */
-  border-radius: 25px; /* Arrotonda gli angoli dei pulsanti */
+  border: none;
+  border-radius: 15px; 
   transition: background-color 0.3s ease, transform 0.2s ease; /* Aggiunto effetto di transizione */
 }
 
 /* Colori specifici per i pulsanti */
 #yes {
-  background-color: #4CAF50; /* Verde per "Sì" */
+  background-color: #4CAF50; 
   color: white;
+  width: 50%;
 }
 
 #no {
-  background-color: #f44336; /* Rosso per "No" */
+  background-color: #f44336; 
   color: white;
+  width: 50%;
 }
 
 #dontKnow {
-  background-color: #9E9E9E; /* Grigio per "Non lo so" */
+  background-color: #9E9E9E;
   color: white;
-  margin-top: 10px; /* Sposta il pulsante sotto gli altri */
-  width: 100%; /* Allunga il pulsante per tutta la larghezza */
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
 }
 
-/* Hover per ogni pulsante */
 .answer-buttons button:hover {
   background-color: #3576a0;
   color: white;
-  transform: scale(1.05); /* Aggiunto effetto hover per ingrandire il pulsante */
+  transform: scale(1.25); 
 }
 
 /* Risultato */
 #result {
   font-size: 18px;
   margin-top: 20px;
+}
+
+.result-img-container {
+  margin-top: 50px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background-color: rgba(225, 242, 255, 0.789);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
