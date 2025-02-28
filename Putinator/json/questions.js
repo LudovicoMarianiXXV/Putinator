@@ -10,6 +10,7 @@ const base_questions = [
     { id: "9", question: "Ha vinto un premio nobel?", type: "nobel", value: true },
     { id: "10", question: "Ha fatto parte del progetto Manhattan?", type: "progect", value: true},
     { id: "11", question: "È mai stato in TV?", type: "tv", value: true},
+    { id: "11", question: "Hanno mai fatto serie tv o film sul tuo personaggio?", type: "tv", value: true},
   ];
   
   const questions = [
