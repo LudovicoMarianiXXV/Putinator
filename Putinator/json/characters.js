@@ -11,6 +11,7 @@ var characters = [
       nation_d: "UK",
       samedb: true,
       alive: false,
+      tv: false,  
     },
     {
       name: "Richard Feynman",
@@ -50,6 +51,7 @@ var characters = [
       region: "Europa",
       nation_b: "Germania",
       nation_d: "USA",
+        samedb: false,
       alive: false,
       nobel: true,
     },
@@ -66,6 +68,7 @@ var characters = [
       samedb: true,
       alive: false,
       tv: true,
+        nobel: false,
     },
     {
       name: "Carl Friedrich Gauss",
@@ -362,7 +365,7 @@ var characters = [
       nation_b: "Croazia",
       nation_d: "USA",
       alive: false,
-      nobel: true,
+      nobel: false,
     },
     {
       name: "Dennis Ritchie",
@@ -401,8 +404,8 @@ var characters = [
       jobs: ["pittore"],
       region: "Europa",
       nation_b: "Italia",
-      nation_d: "Italia",
-      samedb: true,
+      nation_d: "Francia",
+      samedb: false,
       alive: false,
       movimento: "Rinascimento"
     },
