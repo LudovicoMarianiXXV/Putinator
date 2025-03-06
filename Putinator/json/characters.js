@@ -25,6 +25,7 @@ var characters = [
       nation_d: "USA",
       samedb: true,
       alive: false,
+      quant: true,    
        
     },
     {
@@ -39,6 +40,7 @@ var characters = [
       nation_d: "UK",
       samedb: true,
       alive: false,
+      quant: true,    
        
     },
     {
@@ -54,6 +56,9 @@ var characters = [
         samedb: false,
       alive: false,
       nobel: true,
+      grav: true,  
+      quant: true,
+      lab: true,  
     },
     {
       name: "Albert Hoffman",
@@ -120,6 +125,7 @@ var characters = [
       region: "Nord America",
       nation_b: "USA",
       alive: true,
+       os: true,   
     },
     {
       name: "Dmitrij Mendeleev",
@@ -133,6 +139,8 @@ var characters = [
       nation_d: "Russia",
       samedb: true,
       alive: false,
+      elem: true,  
+    
     },
     {
       name: "Enrico Fermi",
@@ -147,6 +155,8 @@ var characters = [
       alive: false,
       nobel: true,
       progect: true,
+      quant: true,
+        lab: true,
     },
     {
       name: "Eulero",
@@ -186,6 +196,8 @@ var characters = [
       samedb: true,
       alive: false,
       nobel: true,
+      quant: true,  
+      lab: true,  
     },
     {
       name: "Alexander Fleming",
@@ -224,6 +236,7 @@ var characters = [
       region: "Europa",
       nation_b: "UK",
       alive: true,
+       os: true,   
     },
     {
       name: "Galileo Galilei",
@@ -263,6 +276,7 @@ var characters = [
       nation_d: "UK",
       samedb: true,
       alive: false, 
+      grav: true,  
     },
     {
       name: "Grace Hopper",
@@ -276,6 +290,7 @@ var characters = [
       nation_d: "USA",
       samedb: true,
       alive: false,
+       os: true,   
     },
     {
       name: "James Watt",
@@ -302,6 +317,8 @@ var characters = [
       nation_d: "USA",
       alive: false,
       progect: true,
+      quant: true,
+      lab: true,  
     },
     {
       name: "Antoine Lavoisier",
@@ -315,6 +332,8 @@ var characters = [
       nation_d: "Francia",
       samedb: true,
       alive: false,
+      elem: true,
+      lab: true,  
     },
     {
       name: "Marie Curie",
@@ -328,6 +347,8 @@ var characters = [
       nation_d: "Francia",
       alive: false,
       nobel: true,
+      elem: true,
+      lab: true,  
     },
     {
       name: "Rosalind Franklin",
@@ -379,6 +400,7 @@ var characters = [
       nation_d: "USA",
       samedb: true,
       alive: false,
+      os: true,  
     },
     {
       name: "J. Robert Oppenheimer",
