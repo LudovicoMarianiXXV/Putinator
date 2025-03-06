@@ -11,7 +11,7 @@ var characters = [
       nation_d: "UK",
       samedb: true,
       alive: false,
-      tv: false,  
+         
     },
     {
       name: "Richard Feynman",
@@ -25,7 +25,7 @@ var characters = [
       nation_d: "USA",
       samedb: true,
       alive: false,
-      tv: true,
+       
     },
     {
       name: "Stephen Hawking",
@@ -39,7 +39,7 @@ var characters = [
       nation_d: "UK",
       samedb: true,
       alive: false,
-      tv: true,
+       
     },
     {
       name: "Albert Einstein",
@@ -67,7 +67,7 @@ var characters = [
       nation_d: "Svizzera",
       samedb: true,
       alive: false,
-      tv: true,
+       
         nobel: false,
     },
     {
