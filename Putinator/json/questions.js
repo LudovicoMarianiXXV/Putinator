@@ -8,8 +8,7 @@ const base_questions = [
     { id: "7", question: "È nato in Europa?", type: "region", value: "Europa" },
     { id: "8", question: "È nato e morto nella stessa nazione?", type: "samedb", value: true},
     { id: "9", question: "Ha vinto un premio nobel?", type: "nobel", value: true },
-    { id: "10", question: "Ha fatto parte del progetto Manhattan?", type: "progect", value: true},
-    { id: "11", question: "Ha mai presentato uno show televisivo?", type: "tv", value: true},
+ 
   ];
   
 const questions = [
@@ -62,5 +61,12 @@ const questions = [
     { id: "52", question: "Era un ammiraglio?", type: "jobs", value: "ammiraglio"},
     { id: "53", question: "Era un biofisico?", type: "jobs", value: "biofisico"},
     { id: "54", question: "Era un fisico?", type: "jobs", value: "fisico"},
+
+    { id: "55", question: "Ha lavorato nel campo della fisica quantistica", type: "quant", value: true },
+    { id: "56", question: "Ha scoperto o studiato elementi chimici", type: "elem", value: true },
+    { id: "57", question: "Ha creato un sistema operativo / linguaggio di programmazione / software?", type: "os", value: true },
+    { id: "58", question: "Ha partecipato alla corsa allo spazio?", type: "space", value: true },
+    { id: "10", question: "Ha fatto parte del progetto Manhattan?", type: "progect", value: true},
+    { id: "11", question: "Ha mai presentato uno show televisivo?", type: "tv", value: true},
   ];
   
