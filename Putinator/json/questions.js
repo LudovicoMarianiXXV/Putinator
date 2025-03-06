@@ -65,8 +65,9 @@ const questions = [
     { id: "55", question: "Ha lavorato nel campo della fisica quantistica", type: "quant", value: true },
     { id: "56", question: "Ha scoperto o studiato elementi chimici", type: "elem", value: true },
     { id: "57", question: "Ha creato un sistema operativo / linguaggio di programmazione / software?", type: "os", value: true },
-    { id: "58", question: "Ha partecipato alla corsa allo spazio?", type: "space", value: true },
+    { id: "58", question: "Ha che fare con la gravità", type: "grav", value: true },
     { id: "10", question: "Ha fatto parte del progetto Manhattan?", type: "progect", value: true},
     { id: "11", question: "Ha mai presentato uno show televisivo?", type: "tv", value: true},
+    { id: "59", question: "Ha istituti o laboratori che portano il loro nome?", type: "lab", value: true},
   ];
   
