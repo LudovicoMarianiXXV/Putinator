@@ -3,17 +3,19 @@ const base_questions = [
     { id: "2", question: "È nato nel XIX secolo?", type: "era", value: "19" },
     { id: "3", question: "È nato nel XX secolo?", type: "era", value: "20" },
     { id: "4", question: "È ancora vivo?", type: "alive", value: true },
-    { id: "5", question: "Fa parte dell'arte?", type: "field", value: "Arte" },
+    { id: "5", question: "Era un pittore?", type: "field", value: "Arte" },
     { id: "6", question: "È una donna?", type: "gender", value: "female" },
     { id: "7", question: "È nato in Europa?", type: "region", value: "Europa" },
     { id: "8", question: "È nato e morto nella stessa nazione?", type: "samedb", value: true},
     { id: "9", question: "Ha vinto un premio nobel?", type: "nobel", value: true },
     { id: "10", question: "Ha fatto parte del progetto Manhattan?", type: "progect", value: true},
-    { id: "11", question: "È mai stato in TV?", type: "tv", value: true},
-    { id: "11", question: "Hanno mai fatto serie tv o film sul tuo personaggio?", type: "tv", value: true},
+    { id: "11", question: "Ha mai presentato uno show televisivo?", type: "tv", value: true},
   ];
   
-  const questions = [
+const questions = [
+
+
+
     { id: "12", question: "Faceva parte del movimento artistico rinascimentale?", type: "movimento", value: "Rinascimento"},
     { id: "13", question: "Faceva parte del movimento artistico del romanticismo?", type: "movimento", value: "Romanticismo"},
     { id: "14", question: "Faceva parte del movimento artistico dell'art deco?", type: "movimento", value: "Art Deco"},
@@ -60,6 +62,5 @@ const base_questions = [
     { id: "52", question: "Era un ammiraglio?", type: "jobs", value: "ammiraglio"},
     { id: "53", question: "Era un biofisico?", type: "jobs", value: "biofisico"},
     { id: "54", question: "Era un fisico?", type: "jobs", value: "fisico"},
-
   ];
   
