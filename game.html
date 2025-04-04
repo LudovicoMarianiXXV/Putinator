@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport">
+  <title>Gioco - Putinator</title>
+  <script src="characters.js"></script>
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+      height: 100vh;
+      background-repeat: no-repeat;
+    }
+    .main-image {
+      width: 475px; 
+      height: auto;
+      max-height: 600px;
+      margin-bottom: 30px;
+      margin-top: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra degli strumenti -->
+  <div class="barra">
+    <button class="barra-home" onclick="goHome2()">HOME</button>
+    <h1 class="barra-title">Putinator</h1>
+    <div class="barra-right">
+      <button class="barra-home" onclick="openDocumentazione()" style="font-size: 1rem;">
+        <span class="barra-steam">STEAM</span>
+      </button>
+      <button class="barra-home" onclick="openDocumentazione()" style="font-size: 1rem;">
+        <span class="barra-who">WHO?</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- contenitore gioco -->
+  <div class="contenitore-n" style="margin-top: 130px">
+    <div class="sinistra2">
+      <img src="putin_genio.png" alt="Putinator" class="main-image" style="height: 480px; width: auto; margin-top: 20px; margin-bottom: -10px;">
+    </div>
+
+    <div class="destra2">
+      <div id="question" class="question-container">Caricamento...</div>
+      <div class="game-container">
+        <!-- Bottoni per le risposte -->
+        <div class="answer-buttons">
+          <button id="yes">Sì</button>
+          <button id="no">No</button>
+        </div>
+
+        <div class="answer-buttons">
+          <button id="dontKnow">Non lo so</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

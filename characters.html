@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaggi - Putinator</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js_c/characters.js"></script>
+    <script src="../js_c/questions.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <!-- Barra degli strumenti -->
+    <div class="barra">
+        <button class="barra-home" onclick="goHome2()">HOME</button>
+        <h1 class="barra-title">Putinator</h1>
+        <div class="barra-right">
+            <button class="barra-home" onclick="openDocumentazione()" style="font-size: 1rem;">
+              <span class="barra-steam">STEAM</span>
+            </button>
+            <button class="barra-home" onclick="openDocumentazione()" style="font-size: 1rem;">
+              <span class="barra-who">WHO?</span>
+            </button>
+          </div>
+    </div>
+
+    <!-- Personaggi -->
+    <div class="contenitore" style="margin-top: 130px">
+        <div class="sinistra">
+            <img src="../img/turing.jpg" alt="Immagine di Turing">
+        </div>
+        <div class="destra">
+            <h2>Alan Turing</h2>
+            <ul>
+                <li>Nato UK 1912</li>
+                <li>Morto UK 1954</li>
+                <li>Matematico, Crittografo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/einstein.jpg" alt="Immagine di Albert Einsten">
+        </div>
+        <div class="destra">
+            <h2>Albert Einsten</h2>
+            <ul>
+                <li>Nato Germania 1879</li>
+                <li>Morto USA 1955</li>
+                <li>Fisico</li>
+            </ul>
+            <p>
+                Ha dato un contributo fondamentale alla fisica quantistica, in particolare con la spiegazione dell'effetto fotoelettrico, che gli valse il Premio Nobel per la Fisica nel 1921 e fu cruciale per lo sviluppo della meccanica quantistica. Inoltre, ha rivoluzionato la comprensione della gravità formulando la Teoria della Relatività Generale nel 1915, descrivendola come la curvatura dello spazio-tempo causata dalla massa e dall'energia. Le sue equazioni di campo hanno previsto fenomeni come la lente gravitazionale e le onde gravitazionali. In suo onore, istituzioni di prestigio portano il suo nome, come l'Einstein Institute of Mathematics and Physics, riconoscendone l'immenso contributo alla fisica.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/hofmann.jpg" alt="Immagine di Albert Hoffman">
+        </div>
+        <div class="destra">
+            <h2>Albert Hoffman</h2>
+            <ul>
+                <li>Nato Svizzera 1906</li>
+                <li>Morto Svizzera 2008</li>
+                <li>Chimico, Farmacologo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/gauss.jpg" alt="Immagine di Carl Friedrich Gauss">
+        </div>
+        <div class="destra">
+            <h2>Carl Friedrich Gauss</h2>
+            <ul>
+                <li>Nato Germania 1777</li>
+                <li>Morto Germania 1885</li>
+                <li>Matematico, Astronomo, Fisico</li>
+            </ul>
+            <p>
+                È considerato il "principe dei matematici", ha dato contributi alla teoria dei numeri, all’analisi, alla geometria differenziale e alla statistica. Ha formulato il metodo dei minimi quadrati, usato per il calcolo delle probabilità, e la legge di Gauss in elettromagnetismo, che descrive il comportamento dei campi elettrici.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/sagan.jpg" alt="Immagine di Carl Sagan">
+        </div>
+        <div class="destra">
+            <h2>Carl Sagan</h2>
+            <ul>
+                <li>Nato USA 1934</li>
+                <li>Morto USA 1996</li>
+                <li>Astrofisico, Divulgatore Scientifico</li>
+            </ul>
+            <p>
+                Creatore e conduttore della serie Cosmos: A Personal Voyage (1980), un documentario televisivo dedicato all'astronomia e alle scienze naturali, ha contribuito a far conoscere questi temi a un vasto pubblico attraverso un linguaggio semplice e narrativo.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/darwin.jpg" alt="Immagine di Charles Darwin">
+        </div>
+        <div class="destra">
+            <h2>Charles Darwin</h2>
+            <ul>
+                <li>Nato UK 1809</li>
+                <li>Morto UK 1882</li>
+                <li>Biologo, Esploratore, Geologo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/hamilton.jpg" alt="Immagine di Margaret Hamilton">
+        </div>
+        <div class="destra">
+            <h2>Margaret Hamilton</h2>
+            <ul>
+                <li>Nata USA 1936</li>
+                <li>Non Ancora morta anche se siamo li</li>
+                <li>Informatica</li>
+            </ul>
+            <p>
+                Ha sviluppato software per il programma Apollo, contribuendo alla creazione di sistemi fondamentali per il volo spaziale. Il software che ha scritto può essere paragonato a un linguaggio di programmazione o a un sistema operativo per la gestione delle missioni, data la sua complessità e importanza nel controllo dei moduli spaziali.            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/mendeleev.jpg" alt="Immagine di Dmitrij Mendelev">
+        </div>
+        <div class="destra">
+            <h2>Dmitrij Mendelev</h2>
+            <ul>
+                <li>Nato Russia 1834</li>
+                <li>Morto Russia 1901</li>
+                <li>Chimico</li>
+            </ul>
+            <p>
+                Ha creato la tavola periodica degli elementi, organizzandoli in base alle loro proprietà chimiche e prevedendo l’esistenza di quelli ancora sconosciuti.            
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/fermi.jpg" alt="Immagine di Enrico Fermi ">
+        </div>
+        <div class="destra">
+            <h2>Enrico Fermi</h2><ul>
+                <li>Nato Italia 1901</li>
+                <li>Morto USA 1954</li>
+                <li>Fisico</li>
+            </ul>
+            <p>
+                Ha dato contributi fondamentali alla fisica quantistica, in particolare con la statistica di Fermi-Dirac, che descrive il comportamento dei fermioni. Ha inoltre rivoluzionato lo studio della radioattività e delle reazioni nucleari, vincendo il Premio Nobel per la Fisica nel 1938 per le sue scoperte sulla radioattività indotta e l'uso dei neutroni lenti. Il suo lavoro è stato determinante nella costruzione del primo reattore nucleare a fissione (Chicago Pile-1) e nello sviluppo della reazione a catena controllata, un passaggio cruciale del Progetto Manhattan per la realizzazione della bomba atomica. In suo onore, istituzioni di ricerca come il Fermi National Accelerator Laboratory (Fermilab) portano il suo nome.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/eulero.jpg" alt="Immagine di Eulero">
+        </div>
+        <div class="destra">
+            <h2>Eulero</h2>
+            <ul>
+                <li>Nato Svizzera 1707</li>
+                <li>Morto Russia 1783</li>
+                <li>Matematico, Fisico, Astronomo</li>
+            </ul>
+            <p>
+                Ha introdotto la moderna notazione matematica, incluso il simbolo 𝑒 per il numero di Eulero e 𝑖 per l’unità immaginaria. Ha fondato la teoria dei grafi, formulato l’identità di Eulero considerata una delle più belle equazioni matematiche, e sviluppato il calcolo delle variazioni, l’analisi complessa e la meccanica analitica.            
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/fibonacci.jpg" alt="Immagine di Fibonacci">
+        </div>
+        <div class="destra">
+            <h2>Fibonacci</h2>
+            <ul>
+                <li>Nato Italia 1170</li>
+                <li>Morto Italia 1242</li>
+                <li>Matematico</li>
+            </ul>
+            <p>
+                Con il suo libro Liber Abaci ha diffuso in Europa il sistema numerico indo-arabico, semplificando i calcoli rispetto alla numerazione romana. La sua successione, oggi nota come "sequenza di Fibonacci", ha applicazioni in matematica, informatica e natura, descrivendo modelli di crescita di piante, popolazioni e strutture geometriche.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/bohr.jpg" alt="Immagine di Niels Bohr ">
+        </div>
+        <div class="destra">
+            <h2>Niels Bohr</h2>
+            <ul>
+                <li>Nato Danimarca 1885</li>
+                <li>Morto Danimarco 1962</li>
+                <li>Fisico</li>
+            </ul>
+            <p>
+                Ha dato contributi fondamentali alla meccanica quantistica, sviluppando il modello atomico quantistico e formulando il principio di complementarità. Ha vinto il Premio Nobel per la Fisica nel 1922 per i suoi studi sulla struttura atomica e sulla teoria quantistica. In suo onore, il Niels Bohr Institute di Copenaghen è oggi un centro di eccellenza nella fisica teorica e nucleare.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/fleming.jpg" alt="Immagine di Fleming ">
+        </div>
+        <div class="destra">
+            <h2>Fleming</h2>
+            <ul>
+                <li>Nato UK 1881</li>
+                <li>Morto UK 1955</li>
+                <li>Chimico</li>
+            </ul>
+            <p>
+                Ha scoperto la penicillina e, insieme a Howard Florey e Ernst Boris Chain, ha ricevuto il Premio Nobel per la Medicina nel 1945 per questa rivoluzionaria scoperta.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/otto.jpg" alt="Immagine di Nikolaus Otto ">
+        </div>
+        <div class="destra">
+            <h2>Nikolaus Otto</h2>
+            <ul>
+                <li>Nato Germania 1832</li>
+                <li>Morto Germania 1891</li>
+                <li>Ingegnere</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/bernerslee.jpg" alt="Immagine di Tim Berners-Lee">
+        </div>
+        <div class="destra">
+            <h2>Tim Berners-Lee</h2>
+            <ul>
+                <li>Nato UK 1995</li>
+                <li>Vivo</li>
+                <li>Informatico</li>
+            </ul>
+            <p>
+                Ha inventato il World Wide Web e sviluppato il linguaggio HTML, alla base della navigazione su Internet. Il suo contributo ha rivoluzionato il modo in cui le informazioni vengono condivise e accessibili online.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/galilei.jpg" alt="Immagine di Galileo Galilei ">
+        </div>
+        <div class="destra">
+            <h2>Galileo Galilei</h2>
+            <ul>
+                <li>Nato Italia 1564</li>
+                <li>Morto Italia 1642</li>
+                <li>Astronomo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/marconi.jpg" alt="Immagine di Guglielmo Marconi">
+        </div>
+        <div class="destra">
+            <h2>Guglielmo Marconi</h2>
+            <ul>
+                <li>Nato Italia 1874</li>
+                <li>Morto Itaglia 1937</li>
+                <li>Ingegnere</li>
+            </ul>
+            <p>
+                Ha sviluppato la telegrafia senza fili, aprendo la strada alle comunicazioni radio, e nel 1909 ha ricevuto il Premio Nobel per la Fisica insieme a Karl Ferdinand Braun per questo fondamentale contributo.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/newton.jpg" alt="Immagine di Isaac Newton ">
+        </div>
+        <div class="destra">
+            <h2>Isaac Newton</h2>
+            <ul>
+                <li>Nato UK 1642</li>
+                <li>Morto UK 1726</li>
+                <li>Matematico, Fisico, Astronomo</li>
+            </ul>
+            <p>
+                Ha rivoluzionato la comprensione del moto e della gravità, formulando la Legge di Gravitazione Universale nel 1687. Ha descritto questa forza come proporzionale al prodotto delle masse e inversamente proporzionale al quadrato della loro distanza, spiegando il moto dei pianeti, le maree e la caduta dei corpi sulla Terra.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/hopper.jpg" alt="Immagine di Grace Hopper">
+        </div>
+        <div class="destra">
+            <h2>Grace Hopper</h2>
+            <ul>
+                <li>Nata USA 1906</li>
+                <li>Morta USA 1992</li>
+                <li>Matematica, Informatica, Ammiraglio</li>
+            </ul>
+            <p>
+                Ha rivoluzionato la programmazione sviluppando uno dei primi compilatori (A-0) e contribuendo alla creazione di FLOW-MATIC, che influenzò direttamente il COBOL, un linguaggio di programmazione fondamentale per la gestione dei dati e delle transazioni nelle aziende.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/watt.jpg" alt="Immagine di James Watt">
+        </div>
+        <div class="destra">
+            <h2>James Watt</h2>
+            <ul>
+                <li>Nato UK 1736 </li>
+                <li>Morto UK 1819</li>
+                <li>Ingegnere</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/newman.jpg" alt="Immagine di Jhon Von Newman">
+        </div>
+        <div class="destra">
+            <h2>Jhon Von Newman</h2>
+            <ul>
+                <li>Nato Ungheria 1903</li>
+                <li>Morto USA 1957</li>
+                <li>Matematico, Fisico, Informatico, Ingegnere</li>
+            </ul>
+            <p>
+                Ha fornito contributi fondamentali alla formalizzazione matematica della meccanica quantistica e all'informatica. Fece parte del Progetto Manhattan, dove ottimizzò i calcoli per la compressione dell’implosione nella bomba al plutonio e sviluppò metodi matematici per migliorare l’efficienza dell’esplosione. Il von Neumann Institute for Computing in Germania e il John von Neumann Center for Computational Science sono stati intitolati a lui per i suoi straordinari contributi alla matematica e all'informatica.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/lavoisier.jpg" alt="Immagine di Lavoisier ">
+        </div>
+        <div class="destra">
+            <h2>Lavoisier</h2>
+            <ul>
+                <li>Nato Francia 1743</li>
+                <li>Morto Francia 1794</li>
+                <li>Chimico, Biologo</li>
+            </ul>
+            <p>
+                Ha identificato e nominato l’ossigeno e l’idrogeno, due elementi chimici fondamentali, contribuendo in modo determinante alla chimica moderna. Il Lavoisier Laboratory a Parigi porta il suo nome in riconoscimento delle sue fondamentali scoperte in chimica.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/curie.jpg" alt="Immagine di Marie Curie ">
+        </div>
+        <div class="destra">
+            <h2>Marie Curie</h2>
+            <ul>
+                <li>Nata Polonia 1867</li>
+                <li>Morta Francia 1934</li>
+                <li>Chimica, Fisica</li>
+            </ul>
+            <p>
+                Nel 1903 ha vinto il Premio Nobel per la Fisica per le sue ricerche sulla radioattività e nel 1911 ha ricevuto il Premio Nobel per la Chimica per la scoperta del radio e del polonio, due elementi chimici radioattivi la cui esposizione prolungata durante i suoi studi portarono alla sua morte. Per questo fu fondato l'Institut Curie a Parigi, uno dei principali centri di ricerca sul cancro al mondo, fu stato intitolato a lei.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/franklin.jpg" alt="Immagine di Rosalind Franklin ">
+        </div>
+        <div class="destra">
+            <h2>Rosalind Franklin</h2>
+            <ul>
+                <li>Nata UK 1920</li>
+                <li>Morta UK 1958</li>
+                <li>Chimica</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/tyson.jpg" alt="Immagine di Neal deGrasse Tyson">
+        </div>
+        <div class="destra">
+            <h2>Neal deGrasse Tyson</h2>
+            <ul>
+                <li>Nato USA 1958</li>
+                <li>Purtroppo Vivo</li>
+                <li>Astrofisico, Divulgatore Scientifico</li>
+            </ul>
+            <p>
+                Ha condotto Cosmos: A Spacetime Odyssey (2014), il seguito della serie di Sagan, portando avanti la missione di rendere la scienza accessibile al grande pubblico. Ha partecipato a numerosi programmi TV e podcast divulgativi, usando un linguaggio semplice e coinvolgente per spiegare concetti complessi e ispirare un interesse diffuso per l'astronomia e la scienza in generale.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/tesla.jpeg" alt="Immagine di Nikola Tesla ">
+        </div>
+        <div class="destra">
+            <h2>Nikola Tesla</h2>
+            <ul>
+                <li>Nato Croazia 1856</li>
+                <li>Morto USA 1943</li>
+                <li>Inventore, Fisico, Ingegnere</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/richie.jpg" alt="Immagine di Dannis Richie">
+        </div>
+        <div class="destra">
+            <h2>Dannis Richie</h2>
+            <ul>
+                <li>Nato USA 1941</li>
+                <li>Morto USA 2011</li>
+                <li>Informatico</li>
+            </ul>
+            <p>Ha creato il linguaggio di programmazione C e contribuito allo sviluppo del sistema operativo Unix, che ha avuto un enorme impatto sull'informatica moderna.</p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/oppenhaimer.jpg" alt="Immagine di Oppenhaimer ">
+        </div>
+        <div class="destra">
+            <h2>J. Robert Oppenheimer</h2>
+            <ul>
+                <li>Nato USA 1904</li>
+                <li>Morto USA 1967</li>
+                <li>Fisico</li>
+            </ul>
+            <p>
+                Ha dato importanti contributi alla fisica teorica, compresa la meccanica quantistica, lavorando sulla teoria dei nuclei e sull'interpretazione della quantizzazione dell'energia. Fu inoltre il direttore scientifico del Progetto Manhattan, coordinando il lavoro degli scienziati a Los Alamos e guidando lo sviluppo delle prime bombe atomiche.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/freyman.jpg" alt="Immagine di Richard Feynman ">
+        </div>
+        <div class="destra">
+            <h2>Richard Feynman</h2>
+            <ul>
+                <li>Nato USA 1918</li>
+                <li>Morto USA 1988</li>
+                <li>Fisico, Divulgatore Scientifico</li>
+            </ul>
+            <p>
+                Famoso per il suo lavoro sull'elettrodinamica quantistica (QED) e per gli omonimi diagrammi, che descrivono le interazioni tra particelle subatomiche, che hanno rivoluzionato la comprensione dei fenomeni quantistici. Per questo, nel 1965, ha vinto il Premio Nobel per la Fisica, insieme a Julian Schwinger e Sin-Itiro Tomonaga.
+            </p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/hawking.jpg" alt="Immagine di Stephen Hawking">
+        </div>
+        <div class="destra">
+            <h2>Stephen Hawking</h2>
+            <ul>
+                <li>Nato UK 1942</li>
+                <li>Morto UK 2018</li>
+                <li>Fisico, Astrofisico, Matematico, Divulgatore Scientifico</li>
+            </ul>
+            <p>Ha lavorato nell'ambito della gravità quantistica, cercando di unificare la relatività generale con la meccanica quantistica (soprattutto nello studio dei buchi neri).</p>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/da_vinci.jpg" alt="Immagine di Leonardo Da Vinci ">
+        </div>
+        <div class="destra">
+            <h2>Leonardo Da Vinci</h2>
+            <ul>
+                <li>Nato Italia 1452</li>
+                <li>Morto Francia 1519</li>
+                <li>Pittore rinascimentale</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/caravaggio.jpg" alt="Immagine di Caravaggio ">
+        </div>
+        <div class="destra">
+            <h2>Caravaggio</h2>
+            <ul>
+                <li>Nato Italia 1571</li>
+                <li>Morto Italia 1610</li>
+                <li>Pittore barocco</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/goya.png" alt="Immagine di Francesco Goya ">
+        </div>
+        <div class="destra">
+            <h2>Francesco Goya</h2>
+            <ul>
+                <li>Nato Spagna 1746</li>
+                <li>Morto Francia 1828</li>
+                <li>Pittore del romanticismo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/kalho.jpg" alt="Immagine di Frida Kalho">
+        </div>
+        <div class="destra">
+            <h2>Frida Kalho</h2>
+            <ul>
+                <li>Nata Messico 1907</li>
+                <li>Morta Messico 1954</li>
+                <li>Pittrice surrealista</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenitore">
+        <div class="sinistra">
+            <img src="../img/lempicka.jpeg" alt="Immagine di Tamara de Lempicka">
+        </div>
+        <div class="destra">
+            <h2>Tamara de Lempicka</h2>
+            <ul>
+                <li>Nata Polonia 1898</li>
+                <li>Morta Messico 1980</li>
+                <li>Pittrice dell'Art Deco</li>
+            </ul>
+        </div>
+    </div>
+</body>

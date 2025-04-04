@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport">
+  <title>Putinator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="characters.js"></script>
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+
+  <style>
+    body{
+      height: 100vh;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body> 
+  <!-- Barra degli strumenti -->
+  <div class="barra">
+    <button class="barra-home" onclick="goHome()">HOME</button>
+    <h1 class="barra-title">Putinator</h1>
+    <div class="barra-right">
+      <button class="barra-home" onclick="openDocumentazioneH()" style="font-size: 1rem;">
+        <span class="barra-steam">STEAM</span>
+      </button>
+      <button class="barra-home" onclick="openDocumentazioneH()" style="font-size: 1rem;">
+        <span class="barra-who">WHO?</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Contenuto principale -->
+  <div class="content">
+    <img src="utin_genio.png" alt="Putinator" class="main-image">
+    <div class="button-container">
+      <button class="action-button" id="play-button" onclick="openGame()">GIOCA</button>
+    </div>
+  </div>
+
+  <!-- Schede laterale -->
+  <div class="side-card right" data-id="1">
+    <p>Per la lista dei personaggi cliccare qui:</p>
+    <button class="side-button" onclick="openCharacters()">Personaggi</button>
+  </div>
+
+  <div class="side-card left" data-id="2">
+    <p>Per il regolamento del gioco cliccare qui:</p>
+    <button class="side-button" onclick="openRegolamento()">Regolamento</button>
+  </div>
+
+</body>
+</html>

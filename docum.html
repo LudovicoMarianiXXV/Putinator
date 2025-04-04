@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentazione - Putinator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="characters.js"></script>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="barra">
+            <button class="barra-home" onclick="goHome2()">HOME</button>
+            <h1 class="barra-title">Putinator</h1>
+            <div class="barra-right">
+                <button class="barra-home" onclick="openDocumentazione()" style="font-size: 1rem;">
+                  <span class="barra-steam">STEAM</span>
+                </button>
+                <button class="barra-home" onclick="openDocumentazione()" style="font-size: 1rem;">
+                  <span class="barra-who">WHO?</span>
+                </button>
+              </div>
+        </div>
+        <div class="contenitore-n" style="margin-top: 130px">
+                
+        <header>
+            <h1>DOCUMENTAZIONE</h1>
+        </header>
+    
+        <section>
+            <h2>Pseudocodice Javascript principale:</h2>
+            <pre style="font-family: 'Courier New', Courier, monospace;">
+                Funzione startGame():
+                    Inizializza variabili:
+                        askedQuestions = []
+                        askedTypes = Set()
+                        remainingCharacters = copia di characters
+                        currentQuestions = copia di base_questions
+                        alternativeQuestions = copia di currentQuestions
+                        nextPhase = false
+                    Ottieni una domanda casuale e mostralo
+    
+                Funzione getRandomQuestion():
+                    Filtra le domande non ancora fatte e con tipo non già chiesto
+                    Se ci sono domande rimanenti:
+                        Scegli una domanda casuale
+                    Altrimenti:
+                        Se nextPhase è false:
+                            Imposta nextPhase a true
+                            Scegli domande dalla lista questions
+                            Riprova a selezionare una domanda
+                    Ritorna null se non ci sono più domande
+    
+                Funzione displayQuestion(question):
+                    Mostra la domanda sulla pagina
+                    Assegna le azioni per ogni risposta (yes, no, dontKnow)
+    
+                Funzione handleAnswer(answer, question):
+                    Aggiorna l'immagine in base alla risposta
+                    Aggiungi la domanda alla lista delle domande fatte
+                    Aggiungi il tipo alla lista dei tipi chiesti
+                    Filtra la lista dei personaggi rimanenti
+                    Se c'è un solo personaggi rimanente, mostra il risultato
+                    Altrimenti, seleziona e mostra la prossima domanda
+    
+                Funzione updateCharacters(answer, question):
+                    Filtra i personaggi in base alla risposta
+                    Se la risposta è "dontKnow", rimuovi la domanda dalla lista delle domande fatte
+    
+                Funzione displayResult():
+                    Se c'è solo un personaggio rimanente, mostra il risultato "vinto"
+                    Se ci sono più personaggi, mostra il risultato "perso"
+                    Salva il risultato nel localStorage
+                    Reindirizza alla pagina del risultato
+    
+                Evento DOMContentLoaded:
+                    Inizia il gioco chiamando startGame()
+            </pre>
+    
+            <h2>Pseudocodice per la gestione del risultato:</h2>
+            <pre style="font-family: 'Courier New', Courier, monospace;">
+                Leggi il risultato dal localStorage usando la chiave "gameResult"
+                Convertilo in un oggetto JavaScript (resultData)
+    
+                Se resultData esiste:
+                    Se resultData.guessed è vero (gioco vinto):
+                        Se esiste resultData.character.image:
+                            Imposta l'immagine a sinistra usando resultData.character.image
+                            Imposta l'alt text dell'immagine con resultData.character.name
+                        Crea un elemento h2 con il nome del personaggio (resultData.character.name)
+                        Aggiungi l'elemento h2 al contenitore (container)
+                    Altrimenti (gioco perso):
+                        Crea un elemento h2 con il messaggio resultData.message
+                        Aggiungi l'elemento h2 al contenitore (container)
+                Altrimenti (se non ci sono risultati):
+                    Imposta il contenuto del contenitore a "Nessun risultato disponibile."
+            </pre>
+        </section>
+
+        <section>
+            <h2>Divisione dei compiti:</h2>
+            <ul>
+                <li><strong>Gruppo composto da:</strong> Impellizzeri Diego (capogruppo), Lucchetti Camilla, Mariani Ludovico e Zucconi Christian.</li>
+            </ul>
+    
+            <h3>Ricerca</h3>
+            <ul>
+                <li><strong>informazioni</strong> — Impellizzeri, Lucchetti, Mariani</li>
+                <li><strong>immagini</strong> — Lucchetti</li>
+                <li><strong>pseudocodice</strong> — Mariani</li>
+            </ul>
+    
+            <h3>Pagine HTML</h3>
+            <ul>
+                <li><strong>Index</strong> — Impellizzeri</li>
+                <li><strong>game</strong> — Impellizzeri, Zucconi</li>
+                <li><strong>characters</strong> — Lucchetti</li>
+                <li><strong>results</strong> — Impellizzeri</li>
+                <li><strong>regolamento</strong> — Zucconi</li>
+                <li><strong>documentazione</strong> — Mariani</li>
+            </ul>
+    
+            <h3>JavaScript</h3>
+            <ul>
+                <li><strong>script</strong> — Impellizzeri, Zucconi</li>
+                <li><strong>questions</strong> — Mariani</li>
+                <li><strong>characters</strong> — Mariani</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Fasi progetto:</h2>
+            <ul>
+                <li>scelta personaggi</li>
+                <li>ricerca di informazioni e immagini</li>
+                <li>strutturazione e design pagine</li>
+                <li>creazione pagine con conseguente css</li>
+                <li>creazione javascript e finti json</li>
+                <li>testing e error control</li>
+            </ul>
+        </section>
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,357 @@
+body {
+    background: linear-gradient(to bottom, #c1e0f6, #f3e3ec);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Comic Sans MS;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+  
+/* Scheda laterale (side-card) */
+.side-card {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  background-color: white;
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #3576a0;
+  transition: all 0.3s ease;
+}
+
+/* Scheda destra */
+.side-card.right {
+  right: -300px;
+  border-radius: 8px 0 0 8px;
+}
+
+/* Scheda sinistra */
+.side-card.left {
+  left: -300px;
+  border-radius: 0 8px 8px 0;
+}
+
+.side-card p {
+  margin: 0 0 10px;
+}
+
+.side-card .side-button {
+  background-color: #a3d4f7;
+  color: #3576a0;
+  border: none;
+  font-family: Comic Sans MS;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.side-card .side-button:hover {
+  background-color: #8bbfdf;
+}
+
+.side-card .side-button:active {
+  background-color: #6aa4c6;
+}
+
+.side-card.open1 {
+  right: 0;
+}
+
+.side-card.open2 {
+  left: 0;
+}
+
+
+/* Barra degli strumenti */
+.barra {
+  width: 100%;
+  height: 60px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(53, 118, 160);
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  margin: 0;
+  z-index: 1000; 
+}
+
+.barra-home {
+  font-weight: bold;
+  background: none;
+  color: white;
+  font-family: Comic Sans MS;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none; 
+  margin-left: 25px;
+}
+
+.barra-home:hover, .barra-home:active {
+  background: none;
+  color: #cce7ff; 
+}
+
+.barra-title {
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 auto; 
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.barra-right {
+  margin-right: 25px;
+  text-align: right;
+  color: white;
+  line-height: 1.2;
+  font-family: Comic Sans MS;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.barra-steam {
+  font-size: 1.5rem; 
+  font-weight: bold;
+}
+
+.barra-who {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Domanda nuvoletta */
+.question-container::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 20%;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgb(2, 2, 2);
+}
+
+.question-container {
+  width: 700px;
+  position: left;
+  top: 50px; 
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid rgb(2, 2, 2);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Contenuto principale index*/
+.content {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.main-image {
+    width: 475px; 
+    height: auto;
+    max-height: 600px;
+    margin-top: 50px;
+  }
+  
+/* Pulsante centrale GIOCA */
+.action-button {
+    background-color: #83c6f6;
+    font-family: Comic Sans MS;
+    color: #3576a0;
+    border: none;
+    padding: 10px 150px; 
+    font-size: 5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 0 10px;
+    transition: background-color 0.2s ease;
+    font-weight: bold;
+  }
+  
+.action-button:hover {
+    background-color: #8bbfdf;
+  }
+  
+.action-button:active {
+    background-color: #6aa4c6;
+    transform: scale(1.25); 
+  }
+  
+
+/* Divisione tra immagine e contenuto dei personaggi */
+.sinistra {
+    float: left; 
+    width: 30%; 
+    text-align: center; 
+}
+
+.sinistra img {
+    width: 100%;
+    max-width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.destra {
+    float: right; 
+    width: 70%;
+    text-align: left;
+}
+
+/* Divisione tra immagine e la domanda/pulsanti */
+.sinistra2 {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.result-image img{
+  width: 100%;
+  max-width: 200px; 
+  height: 200px; 
+  object-fit: cover; 
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.destra2 {
+  float: right; 
+  width: 50%;
+  text-align: center;
+}
+
+.contenitore {
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 90%;
+  position: relative;
+  margin-top: 25px;
+  border-style:groove;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenitore:hover{
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px rgba(244, 172, 234, 0.8);
+}
+
+
+.contenitore-n {
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 90%;
+  position: relative;
+  margin-top: 25px;
+  border-style:groove;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+}
+
+/* Pulsanti e contenitore pulsanti */
+.game-container {
+  margin-top: 140px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  background-color: rgba(225, 242, 255, 0.789);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.answer-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px; /* Distanza tra i pulsanti Sì e No */
+}
+
+.answer-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px; 
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Aggiunto effetto di transizione */
+}
+
+/* Colori specifici per i pulsanti */
+#yes {
+  background-color: #4CAF50; 
+  color: white;
+  width: 50%;
+}
+
+#no {
+  background-color: #f44336; 
+  color: white;
+  width: 50%;
+}
+
+#dontKnow {
+  background-color: #9E9E9E;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.answer-buttons button:hover {
+  background-color: #3576a0;
+  color: white;
+  transform: scale(1.25); 
+}
+
+/* Risultato */
+#result {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.result-img-container {
+  margin-top: 50px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background-color: rgba(225, 242, 255, 0.789);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

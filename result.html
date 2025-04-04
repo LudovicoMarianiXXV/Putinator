@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Risultati - Putinator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="characters.js"></script>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+    <style>
+        .action-button{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra degli strumenti -->
+    <div class="barra">
+        <button class="barra-home" onclick="goHome2()">HOME</button>
+        <h1 class="barra-title">Putinator</h1>
+        <div class="barra-right">
+          <button class="barra-home" onclick="openDocumentazione()" style="font-size: 1rem;">
+            <span class="barra-steam">STEAM</span>
+          </button>
+          <button class="barra-home" onclick="openDocumentazione()" style="font-size: 1rem;">
+            <span class="barra-who">WHO?</span>
+          </button>
+        </div>
+    </div>
+
+    <!-- Contenitore risultati -->
+    <div class="contenitore-n" style="margin-top: 110px">
+        <div class="sinistra2">
+          <img src="putin_genio.png" alt="Putinator" class="main-image">
+        </div>
+    
+        <div class="destra2">
+          <div id="resultContainer" class="question-container"></div>
+          <div class="result-img-container">
+            <div class="result-image"><img id="characterImage" src="" alt="Immagine del Personaggio"></div>
+    <br>
+            <button class="action-button" id="play-button" onclick="openGame2()">Ricomincia Gioco</button>
+          </div>
+        </div>
+      </div>
+
+  <script>
+    // Legge il risultato salvato dal localStorage
+    const resultData = JSON.parse(localStorage.getItem("gameResult"));
+    const container = document.getElementById("resultContainer");
+
+    if (resultData) {
+      if (resultData.guessed) {
+          // Immagine personaggio
+          if (resultData.character.image) {
+              const characterImage = document.getElementById("characterImage");
+              characterImage.src = resultData.character.image;
+              characterImage.alt = resultData.character.name;
+          }
+
+          // Nome personaggio
+          const nameElem = document.createElement("h2");
+          nameElem.innerText = resultData.character.name;
+          container.appendChild(nameElem);
+
+      } else {
+          // Mostra il messaggio di “non indovinato”
+          const messageElem = document.createElement("h2");
+          messageElem.innerText = resultData.message;
+          container.appendChild(messageElem);
+
+          // Cambia l'immagine in punto.png
+          const characterImage = document.getElementById("characterImage");
+          characterImage.src = "punto.png";
+          characterImage.alt = "Tentativo fallito";
+      }
+  } else {
+      container.innerText = "Nessun risultato disponibile.";
+  }
+
+  </script>
+</body>
+</html>
